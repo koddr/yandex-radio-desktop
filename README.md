@@ -8,7 +8,7 @@
 
 ## Looking for Yandex.Music Desktop?
 
-- [Un-official Yandex.Music Desktop app](https://github.com/koddr/yandex-music-desktop/releases)
+- [Un-official Yandex.Music Desktop app](https://github.com/koddr/yandex-music-desktop)
 
 ## 💭 The Why?
 
