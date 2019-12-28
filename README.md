@@ -26,7 +26,7 @@ Therefore, I was very upset that _Yandex.Radio_ does not have a macOS (or Window
 
 ## 🔗 [Download](https://github.com/koddr/yandex-radio-desktop/releases) latest version:
 
-- [Apple macOS 10.11+ x64](https://github.com/koddr/yandex-radio-desktop/releases/download/0.1.1/yaradio_desktop-macosx-amd64.dmg) (`.dmg`, 2.39 MB)
+- [Apple macOS 10.11+ x64](https://github.com/koddr/yandex-radio-desktop/releases/download/0.1.1/yaradio_desktop-macosx-amd64.dmg) (`.dmg`, 2.40 MB)
 - [Microsoft Windows 10 x64](https://github.com/koddr/yandex-radio-desktop/releases/download/0.1.1/yaradio_desktop-windows-10-amd64.zip) (`.zip`, 2.11 MB)
 
 GNU/Linux → coming as soon as possible.
