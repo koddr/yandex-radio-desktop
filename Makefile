@@ -13,14 +13,23 @@ build-macos:
 	&& GOOS=darwin GOARCH=amd64 go build -o ./build/macOS/Yandex.Radio\ Desktop.app/Contents/MacOS/yaradio_desktop
 	@echo "[✔️] Build for macOS complete!"
 
-installer-macos-10_4:
-	rm -rf ./releases/macOS/yaradio_desktop.osx10_4x64.dmg \
-	&& mkdir -p ./releases/macOS/ \
-	&& appdmg ./configs/macOS/appdmg.config.osx10_4.json ./releases/macOS/yaradio_desktop.osx10_4x64.dmg
-	@echo "[✔️] macOS 10.4+ installer created!"
+build-windows:
+	rm -rf ./build/Windows/ \
+	&& mkdir -p ./build/Windows/ \
+	&& xgo -out ./build/Windows/yaradio_desktop -ldflags="-H windowsgui" --targets=windows-10/amd64 \
+	github.com/koddr/yandex-radio-desktop \
+	&& mv ./build/Windows/yaradio_desktop-windows-10-amd64.exe ./build/Windows/Yandex.Radio\ Desktop.exe
+	@echo "[✔️] Build for MS Windows 10 x64 complete!"
 
-installer-macos-10_11:
-	rm -rf ./releases/macOS/yaradio_desktop.osx10_11x64.dmg \
+installer-macos:
+	rm -rf ./releases/macOS/ \
 	&& mkdir -p ./releases/macOS/ \
-	&& appdmg ./configs/macOS/appdmg.config.osx10_11.json ./releases/macOS/yaradio_desktop.osx10_11x64.dmg
+	&& appdmg ./configs/macOS/appdmg.config.json ./releases/macOS/yaradio_desktop-macosx-amd64.dmg
 	@echo "[✔️] macOS 10.11+ installer created!"
+
+archive-zip-windows:
+	rm -rf ./releases/Windows/ \
+	&& mkdir -p ./releases/Windows/ \
+	&& cd ./build/Windows \
+	&& zip ../../releases/Windows/yaradio_desktop-windows-10-amd64.zip ./Yandex.Radio\ Desktop.exe
+	@echo "[✔️] MS Windows 10 zip-archive created!"

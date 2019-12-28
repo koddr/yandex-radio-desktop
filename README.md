@@ -2,13 +2,15 @@
 
 ![Yandex.Radio Desktop (un-official port of website)](static/GitHub/macOS_installer_screenshot.jpg)
 
-<p align="center"><strong>Please note:</strong> this is <em>only</em> desktop port of <a href="https://radio.yandex.ru" target="_blank">Yandex.Radio</a> website.</p>
+<h3 align="center"><strong>Please note:</strong> this is <em>only</em> webview port of <a href="https://radio.yandex.ru" target="_blank">Yandex.Radio</a> website as desktop app!</h3>
 
-<p align="center"><em>The author of this desktop port <strong>is not</strong> responsible for long support of this desktop application, because YANDEX LLC may changes the way it provides content and/or releases its own desktop application.</em></p>
+<br/>
 
-## Looking for Yandex.Music Desktop?
+### Looking for a similar desktop app for Yandex.Music?
 
-- 🎵 [Un-official Yandex.Music Desktop app](https://github.com/koddr/yandex-music-desktop)
+- 🎵 Un-official [Yandex.Music Desktop](https://github.com/koddr/yandex-music-desktop) app
+
+<br/>
 
 ## 💭 The Why?
 
@@ -24,10 +26,10 @@ Therefore, I was very upset that _Yandex.Radio_ does not have a macOS (or Window
 
 ## 🔗 [Download](https://github.com/koddr/yandex-radio-desktop/releases) latest version:
 
-- [macOS 10.4+ x64](https://github.com/koddr/yandex-radio-desktop/releases/download/0.1.0/yaradio_desktop.osx10_4x64.dmg) (`.dmg`, 2.37 MB)
-- [macOS 10.11+ x64](https://github.com/koddr/yandex-radio-desktop/releases/download/0.1.0/yaradio_desktop.osx10_11x64.dmg) (`.dmg`, 2.41 MB)
+- [Apple macOS 10.11+ x64](https://github.com/koddr/yandex-radio-desktop/releases/download/0.1.1/yaradio_desktop-macosx-amd64.dmg) (`.dmg`, 2.39 MB)
+- [Microsoft Windows 10 x64](https://github.com/koddr/yandex-radio-desktop/releases/download/0.1.1/yaradio_desktop-windows-10-amd64.zip) (`.zip`, 2.11 MB)
 
-GNU/Linux and MS Windows → comming as soon as possible.
+GNU/Linux → coming as soon as possible.
 
 ## ⚙️ Under the hood
 
@@ -78,6 +80,8 @@ It uses Cocoa/WebKit on macOS, gtk-webkit2 on Linux and MSHTML (IE10/11) on Wind
 
 Installation `.dmg` images for macOS was created by [node-appdmg](https://github.com/LinusU/node-appdmg) (many thx to [Linus Unnebäck](https://github.com/LinusU)).
 
+MS Windows 10 version available thanks to [xgo](https://github.com/karalabe/xgo) (Go CGO cross compiler by [Péter Szilágyi](https://github.com/karalabe)).
+
 ### For developers
 
 1. Clone this repository and go to folder `yandex-radio-desktop`:
@@ -88,17 +92,28 @@ foo@bar:~$ cd yandex-radio-desktop
 ```
 
 2. Change anything you want 👌
-3. Build app binary again (at this moment, only for macOS), it's required `Go` 1.13+:
+3. Build app binary again for macOS (it's required `Go` 1.13+):
 
 ```console
-foo@bar:~$ make build-macos
+foo@bar:~$ make build-macos # build .app for macOS
 ```
 
-4. Go to `./build` folder and copy `Yandex.Radio Desktop.app` to your `/Applications`:
+- OR for Windows 10:
 
 ```console
-foo@bar:~$ sudo cp -R ./build/Yandex.Radio\ Desktop.app /Applications
+foo@bar:~$ go get github.com/karalabe/xgo # install xgo cross compiler
+foo@bar:~$ make build-windows # build .exe for Windows 10
 ```
+
+4. Go to `./build/<macOS|Windows>` folder
+
+- Copy `Yandex.Radio Desktop.app` to your `/Applications` folder on macOS:
+
+```console
+foo@bar:~$ sudo cp -R ./build/macOS/Yandex.Radio\ Desktop.app /Applications
+```
+
+- OR copy `Yandex.Radio Desktop.exe` to anything you want on Windows 10 system!
 
 #### (Optional) Create macOS installation images
 
@@ -111,11 +126,20 @@ foo@bar:~$ npm install -g appdmg
 - Create macOS installation image (`.dmg`):
 
 ```console
-foo@bar:~$ make installer-macos-10_4 # for macOS 10.4+
-foo@bar:~$ make installer-macos-10_11 # for macOS 10.11+
+foo@bar:~$ make installer-macos # for macOS 10.11+
 ```
 
-- You can found created image into `./releases` folder.
+- You can found created image into `./releases/macOS` folder.
+
+#### (Optional) Create zip-archive for Windows 10
+
+- Create zip-archive:
+
+```console
+foo@bar:~$ make archive-zip-windows # for Windows 10
+```
+
+- You can found created ZIP into `./releases/Windows` folder.
 
 ### For designers
 
@@ -130,6 +154,8 @@ If you download, install and run _Yandex.Radio Desktop_ application from current
 ## Developers
 
 - Idea and active development by [Vic Shóstak](https://github.com/koddr) (aka Koddr).
+
+> _The author ([Vic Shóstak](https://github.com/koddr)) of this Yandex.Music desktop port **is not** responsible for work of this desktop application, because YANDEX LLC may changes the way it provides content and/or releases its own desktop application._
 
 ## Project assistance
 
@@ -146,4 +172,4 @@ Thanks for your support! 😘 Together, we make this project better every day.
 
 _Yandex.Radio Desktop_ by [Vic Shóstak](https://github.com/koddr) is an open source software under [MIT](LICENSE) license.
 
-Background image for macOS installer is designed by [Vic Shóstak](https://github.com/koddr) and under [CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0) license.
+Background image for macOS installer is designed by [Vic Shóstak](https://github.com/koddr) and under [CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0) license protection.
