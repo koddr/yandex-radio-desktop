@@ -6,9 +6,9 @@
 
 <br/>
 
-### Looking for a similar desktop app for Yandex.Music?
-
-- 🎵 Un-official [Yandex.Music Desktop](https://github.com/koddr/yandex-music-desktop) app
+> ### Looking for a similar desktop app for Yandex.Music?
+>
+> - 🎵 Un-official [Yandex.Music Desktop](https://github.com/koddr/yandex-music-desktop) app
 
 <br/>
 
