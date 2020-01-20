@@ -6,9 +6,9 @@
 
 <br/>
 
-> ### Looking for a similar desktop app for Yandex.Music?
->
-> - 🎵 Un-official [Yandex.Music Desktop](https://github.com/koddr/yandex-music-desktop) app
+### Looking for a similar desktop app for Yandex.Music?
+
+- 🎵 Un-official [Yandex.Music Desktop](https://github.com/koddr/yandex-music-desktop) app
 
 <br/>
 
@@ -149,6 +149,10 @@ foo@bar:~$ make archive-zip-windows # for Windows 10
 ### For designers
 
 At `./static/macOS` folder you can found layered Adobe Photoshop source file (`.psd`) of macOS installation image: `yaradio_desktop.background.psd` ([CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0)).
+
+### For Windows 10 users, who removed Microsoft Edge browser
+
+Yandex.Radio Desktop app running from default OS webview layer, if you removed Edge browser — webview layer is Internet Explorer 11 (not Google Chrome/FireFox/Opera/etc., because it's third-party software for Windows!).
 
 ## ⚠️ Terms of Use of Yandex.Radio
 
